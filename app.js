@@ -2,7 +2,7 @@
 const handler = Plaid.create({
     env: 'sandbox',
     clientName: 'My Charity',
-    key: process.env.PLAID_CLIENT_ID,
+    key: '',
     product: ['auth'],
     onSuccess: (publicToken, metadata) => {
       // Send public token to server to exchange for access token
@@ -30,6 +30,11 @@ const handler = Plaid.create({
         document.getElementById('errorMessage').classList.remove('is-hidden');
       });
     }
+  });
+
+  // add event listenter to redirect to https://www.gofundme.com/f/7ee4q5-help-haitis-children?qid=f103764ed968726af36b95015bee2491 on donateButton click
+  document.getElementById('donateButton').addEventListener('click', ()=>{
+    window.location.href = "https://www.gofundme.com/f/7ee4q5-help-haitis-children?qid=f103764ed968726af36b95015bee2491";
   });
   
   // Add event listener to launch Plaid Link on button click

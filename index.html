@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate to Diquini Orphans</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <a class="navbar-item" href="https://diquiniorpahns.com">
+            <img src="/logos/1024.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="40" height="30">
+          </a>
+          <h1 class="title">
+            Donate to Diquini Orphans
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+              <p class="title">
+                In Memorium
+              </p>
+              <p class="subtitle">
+                In Memory of the orphanage's founder, Philippe Salomon, please fill out the form below to donate.
+              </p>
+            </div>
+          </section>
+        <div class="columns">
+            <div class="column is-half">
+        <hero>
+            <hero--body>
+                <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-half">
+                        <img src="diquini1.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                  </div>
+            </hero--body>
+          </hero>
+            </div>
+            <div class="column is-half">
+                <hero>
+                    <hero--body>
+                        <div class="card">
+                            <div class="card-image">
+                              <figure class="image is-primary">
+                                <img src="diquini2.jpg" alt="Placeholder image">
+                              </figure>
+                            </div>
+                          </div>
+                    </hero--body>
+                  </hero>
+                    </div>
+        </div>
+        <div class="columns">
+          <div class="column is-half">
+            <div class="field">
+              <label class="label">Amount</label>
+              <div class="control">
+                <input class="input" type="number" id="donationAmount" min="1" step="any">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Bank Account</label>
+            <div class="control">
+              <button class="button is-primary" id="linkButton">
+                Link Bank Account
+              </button>
+              <input type="hidden" id="accountToken">
+              <input type="hidden" id="accountId">
+              <input type="hidden" id="accountName">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" id="donorName">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" id="donorEmail">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" id="donateButton">
+                Donate
+              </button>
+            </div>
+          </div>
+          <div class="notification is-success is-hidden" id="successMessage">
+            Donation successful!
+          </div>
+          <div class="notification is-danger is-hidden" id="errorMessage">
+            Donation failed. Please try again.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+  
+               

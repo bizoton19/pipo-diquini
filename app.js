@@ -34,7 +34,7 @@ const handler = Plaid.create({
 
   // add event listenter to redirect to https://www.gofundme.com/f/7ee4q5-help-haitis-children?qid=f103764ed968726af36b95015bee2491 on donateButton click
   document.getElementById('donateButton').addEventListener('click', ()=>{
-    window.location.href = "https://www.gofundme.com/f/7ee4q5-help-haitis-children?qid=f103764ed968726af36b95015bee2491";
+    window.location.href = "https://www.gofundme.com/f/donate-in-memory-of-pipo-salomon-the-cofounder?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1";
   });
   
   // Add event listener to launch Plaid Link on button click
